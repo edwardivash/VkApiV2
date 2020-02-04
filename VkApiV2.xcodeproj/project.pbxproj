@@ -15,6 +15,9 @@
 		2F3453A923E9D3FC00EC998A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3453A823E9D3FC00EC998A /* AuthViewController.swift */; };
 		2F3453AB23E9D41500EC998A /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3453AA23E9D41500EC998A /* AuthViewController.storyboard */; };
 		2F3453AD23E9D48200EC998A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3453AC23E9D48100EC998A /* AuthService.swift */; };
+		2F3453B123E9E54400EC998A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3453B023E9E54400EC998A /* FeedViewController.swift */; };
+		2F3453B323E9E56B00EC998A /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3453B223E9E56B00EC998A /* FeedViewController.storyboard */; };
+		2F3453B523E9E87600EC998A /* UIViewController + StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3453B423E9E87600EC998A /* UIViewController + StoryBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +44,9 @@
 		2F3453A823E9D3FC00EC998A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		2F3453AA23E9D41500EC998A /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
 		2F3453AC23E9D48100EC998A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		2F3453B023E9E54400EC998A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		2F3453B223E9E56B00EC998A /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
+		2F3453B423E9E87600EC998A /* UIViewController + StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + StoryBoard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 				2F34538E23E9CD5500EC998A /* AppDelegate.swift */,
 				2F3453AF23E9D6DC00EC998A /* Auth */,
 				2F3453AE23E9D48700EC998A /* Services */,
+				2F3453B623E9E88000EC998A /* Helpers */,
 				2F34539723E9CD5800EC998A /* Assets.xcassets */,
 				2F34539923E9CD5800EC998A /* LaunchScreen.storyboard */,
 				2F34539C23E9CD5800EC998A /* Info.plist */,
@@ -97,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				2F3453AC23E9D48100EC998A /* AuthService.swift */,
+				2F3453B023E9E54400EC998A /* FeedViewController.swift */,
+				2F3453B223E9E56B00EC998A /* FeedViewController.storyboard */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -108,6 +117,14 @@
 				2F3453AA23E9D41500EC998A /* AuthViewController.storyboard */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		2F3453B623E9E88000EC998A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2F3453B423E9E87600EC998A /* UIViewController + StoryBoard.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +190,7 @@
 				2F34539B23E9CD5800EC998A /* LaunchScreen.storyboard in Resources */,
 				2F3453AB23E9D41500EC998A /* AuthViewController.storyboard in Resources */,
 				2F34539823E9CD5800EC998A /* Assets.xcassets in Resources */,
+				2F3453B323E9E56B00EC998A /* FeedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F3453AD23E9D48200EC998A /* AuthService.swift in Sources */,
+				2F3453B523E9E87600EC998A /* UIViewController + StoryBoard.swift in Sources */,
 				2F3453A923E9D3FC00EC998A /* AuthViewController.swift in Sources */,
+				2F3453B123E9E54400EC998A /* FeedViewController.swift in Sources */,
 				2F34538F23E9CD5500EC998A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

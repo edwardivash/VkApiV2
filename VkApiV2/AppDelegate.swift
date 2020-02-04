@@ -69,6 +69,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AuthServiceDelegate {
        
        func authServiceSignIn() {
         print(#function)
+        let feedVC = UIStoryboard(name: "FeedViewController", bundle: nil).instantiateInitialViewController() as! FeedViewController
+        let navigVC = UINavigationController(rootViewController: feedVC)
+        window?.rootViewController = navigVC
        }
        
        func authServiceDidSignInFail() {
