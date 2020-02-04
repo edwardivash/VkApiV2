@@ -12,7 +12,23 @@
 		2F34539623E9CD5500EC998A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F34539423E9CD5500EC998A /* Main.storyboard */; };
 		2F34539823E9CD5800EC998A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F34539723E9CD5800EC998A /* Assets.xcassets */; };
 		2F34539B23E9CD5800EC998A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F34539923E9CD5800EC998A /* LaunchScreen.storyboard */; };
+		2F3453A423E9D29A00EC998A /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3453A323E9D29A00EC998A /* VKSdkFramework.framework */; };
+		2F3453A523E9D29A00EC998A /* VKSdkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3453A323E9D29A00EC998A /* VKSdkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2F3453A623E9D29A00EC998A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F3453A523E9D29A00EC998A /* VKSdkFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2F34538B23E9CD5500EC998A /* VkApiV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VkApiV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,7 @@
 		2F34539723E9CD5800EC998A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F34539A23E9CD5800EC998A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F34539C23E9CD5800EC998A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F3453A323E9D29A00EC998A /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F3453A423E9D29A00EC998A /* VKSdkFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +58,7 @@
 			children = (
 				2F34538D23E9CD5500EC998A /* VkApiV2 */,
 				2F34538C23E9CD5500EC998A /* Products */,
+				2F3453A223E9D29A00EC998A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +83,14 @@
 			path = VkApiV2;
 			sourceTree = "<group>";
 		};
+		2F3453A223E9D29A00EC998A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F3453A323E9D29A00EC998A /* VKSdkFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +101,8 @@
 				2F34538723E9CD5500EC998A /* Sources */,
 				2F34538823E9CD5500EC998A /* Frameworks */,
 				2F34538923E9CD5500EC998A /* Resources */,
+				2F3453A623E9D29A00EC998A /* Embed Frameworks */,
+				2F3453A723E9D2A700EC998A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -129,6 +158,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F3453A723E9D2A700EC998A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/VKSdkFramework.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F34538723E9CD5500EC998A /* Sources */ = {
@@ -282,6 +332,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M25X6SA3H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VkApiV2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -301,6 +355,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M25X6SA3H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VkApiV2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
