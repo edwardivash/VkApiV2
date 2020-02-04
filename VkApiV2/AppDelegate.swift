@@ -17,7 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var authService:AuthService!
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        window = UIWindow()
         self.authService = AuthService()
+        
+        let authVC = UIStoryboard(name: "AuthViewController", bundle: nil).instantiateInitialViewController() as? AuthViewController
+        
+        window?.rootViewController = authVC
+        window?.makeKeyAndVisible()
         return true
     }
 

@@ -76,9 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				2F34538E23E9CD5500EC998A /* AppDelegate.swift */,
+				2F3453AF23E9D6DC00EC998A /* Auth */,
 				2F3453AE23E9D48700EC998A /* Services */,
-				2F3453A823E9D3FC00EC998A /* AuthViewController.swift */,
-				2F3453AA23E9D41500EC998A /* AuthViewController.storyboard */,
 				2F34539723E9CD5800EC998A /* Assets.xcassets */,
 				2F34539923E9CD5800EC998A /* LaunchScreen.storyboard */,
 				2F34539C23E9CD5800EC998A /* Info.plist */,
@@ -100,6 +99,15 @@
 				2F3453AC23E9D48100EC998A /* AuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		2F3453AF23E9D6DC00EC998A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2F3453A823E9D3FC00EC998A /* AuthViewController.swift */,
+				2F3453AA23E9D41500EC998A /* AuthViewController.storyboard */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
