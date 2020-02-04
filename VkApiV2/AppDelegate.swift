@@ -10,15 +10,21 @@ import UIKit
 import VKSdkFramework
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, AuthServiceDelegate {
     
     var window: UIWindow?
     
     var authService:AuthService!
+    
+    static func shared() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow()
         self.authService = AuthService()
+        authService.delegator = self
         
         let authVC = UIStoryboard(name: "AuthViewController", bundle: nil).instantiateInitialViewController() as? AuthViewController
         
@@ -53,5 +59,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    // MARK: Functions AuthServiceDelegate
+    
+    func authServiceShouldShow(_ viewController: UIViewController) {
+        print(#function)
+        window?.rootViewController?.present(viewController, animated: true, completion: nil)
+       }
+       
+       func authServiceSignIn() {
+        print(#function)
+       }
+       
+       func authServiceDidSignInFail() {
+        print(#function)
+       }
+       
 }
 
