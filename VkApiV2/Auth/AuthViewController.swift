@@ -11,15 +11,17 @@ import VKSdkFramework
 
 class AuthViewController: UIViewController {
 
+    private var authService:AuthService!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        authService = AuthService()
     }
 
     
     @IBAction func signInButton(_ sender: UIButton) {
-        print("1488228")
+        authService.wakeupSession()
     }
     
 }
